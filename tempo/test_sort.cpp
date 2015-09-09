@@ -110,6 +110,8 @@ int main(int argc, char *argv[])
 		menor_cpu_merge = tempo_cpu_merge[i] < menor_cpu_merge ? tempo_cpu_merge[i] : menor_cpu_merge;
 
 		redefinir_vetores(base, select_vet, merge_vet, tam);
+
+		printf("%d / %d\n", i + 1, qtd_amostras);
 	}
 
 	/* --- Calcular estatícas --- */
@@ -158,7 +160,7 @@ int main(int argc, char *argv[])
 
 	printf("\n ------------------------ \n\n");
 
-	printf("Select Sort\n");
+	printf("\t\tSelect Sort\n");
 	
 	printf("Maior tempo de execução: %f\n", maior_exec_select);
 	printf("Menor tempo de execução: %f\n", menor_exec_select);
@@ -174,7 +176,7 @@ int main(int argc, char *argv[])
 
 	printf("\n ------------------------ \n\n");
 
-	printf("Merge Sort\n");
+	printf("\t\tMerge Sort\n");
 	
 	printf("Maior tempo de execução: %f\n", maior_exec_merge);
 	printf("Menor tempo de execução: %f\n", menor_exec_merge);
